@@ -6339,7 +6339,7 @@ const child_process = __nccwpck_require__(129);
 try {
   // `instance-id` input defined in action metadata file
 	const instanceId = core.getInput('instance-id');
-	const waitInstanceRunning = core.getInput('wait-instance-running');
+	const waitInstanceRunning = core.getBooleanInput('wait-instance-running');
 
 	console.log(`Start instance ${instanceId}`);
 
