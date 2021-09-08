@@ -7,7 +7,7 @@ try {
   const instanceId = core.getInput('instance-id');
 	console.log(`Start EC2 instance ${instanceId}!`);
 
-	const startInstance = child_process.execSync('aws ec2 start-instances', ['--instance-ids', instanceId]).toString();
+	const startInstance = child_process.execSync(`aws ec2 start-instances --instance-ids ${instanceId}`).toString();
 	// console.log('status: ' + startInstance.status);
 	// console.log('stdout: ' + startInstance.stdout.toString('utf8'));
 	// console.log('stderr: ' + startInstance.stderr.toString('utf8'));
