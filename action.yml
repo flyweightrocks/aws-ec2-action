@@ -1,0 +1,14 @@
+name: 'AWS EC2 Instance'
+description: 'Start and Stop AWS EC2 Instance'
+inputs:
+  instance-id:  
+    description: 'Instance ID'
+    required: true
+outputs:
+  current-state: 
+    description: 'The current state of the instance'
+  previous-state: 
+    description: 'The previous state of the instance'    
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

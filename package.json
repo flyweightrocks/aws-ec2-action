@@ -1,0 +1,24 @@
+{
+  "name": "aws-ec2-action",
+  "version": "1.0.0",
+  "description": "Start and Stop AWS EC2 Instances",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build index.js --license licenses.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flyweightrocks/aws-ec2-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flyweightrocks/aws-ec2-action/issues"
+  },
+  "homepage": "https://github.com/flyweightrocks/aws-ec2-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.5.0",
+    "@actions/github": "^5.0.0"
+  }
+}
