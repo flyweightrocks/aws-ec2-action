@@ -8,8 +8,12 @@ try {
 	console.log(`Start EC2 instance ${instanceId}!`);
 
 	const startInstance = child_process.spawnSync('aws ec2 start-instances', ['--instance-ids', instanceId]);
-	const output = JSON.parse(startInstance.stdout);
-	const error = JSON.parse(startInstance.stderr);
+	console.log('status: ' + startInstance.status);
+	console.log('stdout: ' + startInstance.stdout.toString('utf8'));
+	console.log('stderr: ' + startInstance.stderr.toString('utf8'));
+	
+	const output = JSON.parse(startInstance.stdout.toString('utf8'));
+	const error = JSON.parse(startInstance.stderr.toString('utf8'));
 
 	for (let state of output.StartingInstances) {
 		const previous = state.PreviousState.Name;
@@ -25,5 +29,6 @@ try {
   const json = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
 } catch (error) {
+	console.error('error', JSON.stringify(error, undefined, 2));
   core.setFailed(error.message);
 }
