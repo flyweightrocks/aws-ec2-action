@@ -11,10 +11,8 @@ try {
 	// console.log('status: ' + startInstance.status);
 	// console.log('stdout: ' + startInstance.stdout.toString('utf8'));
 	// console.log('stderr: ' + startInstance.stderr.toString('utf8'));
-	
 	// const out = JSON.stringify(startInstance, undefined, 2);
 	console.log('output', startInstance);
-
 	const output = JSON.parse(startInstance);
 	// const error = JSON.parse(startInstance.stderr.toString('utf8'));
 	// for (let state of output.StartingInstances) {
