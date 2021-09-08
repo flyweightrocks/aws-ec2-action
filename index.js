@@ -17,7 +17,6 @@ try {
 
 	const output = JSON.parse(startInstance);
 	// const error = JSON.parse(startInstance.stderr.toString('utf8'));
-
 	// for (let state of output.StartingInstances) {
 	// 	const previous = state.PreviousState.Name;
 	// 	const current = state.CurrentState.Name;
@@ -28,7 +27,6 @@ try {
 	// 	console.log(`Current state ${current}!`);
 	// 	core.setOutput("current-state", current);
 	// }
-
 	const json = JSON.stringify(github.context.payload, undefined, 2);
   console.log(`The event payload: ${payload}`);
 } catch (error) {
