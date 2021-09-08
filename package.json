@@ -4,7 +4,8 @@
   "description": "Start and Stop AWS EC2 Instances",
   "main": "index.js",
   "scripts": {
-    "build": "ncc build index.js --license licenses.txt"
+    "build": "ncc build index.js --license licenses.txt",
+    "tag:del": "git tag -d v1 && git push origin :refs/tags/v1"
   },
   "repository": {
     "type": "git",
