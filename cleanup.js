@@ -5,10 +5,10 @@ const child_process = require('child_process');
 try {
   // `instance-id` input defined in action metadata file
   const instanceId = core.getInput('instance-id');
-	console.log(`Start EC2 instance ${instanceId}!`);
+	console.log(`Stop EC2 instance ${instanceId}!`);
 
 	const output = JSON.parse(child_process
-		.execSync(`aws ec2 start-instances --instance-ids ${instanceId}`)
+		.execSync(`aws ec2 stop-instances --instance-ids ${instanceId}`)
 		.toString());
 
 	for (let state of output.StartingInstances) {
