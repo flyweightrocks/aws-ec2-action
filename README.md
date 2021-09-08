@@ -24,6 +24,11 @@ with:
 
 `instance-id`
 The instance ID of the EC2 container.
+**Required: true**  
+
+`wait-instance-running`
+Wait until the instance is running.
+**Default: true**  
 
 ## Outputs
 

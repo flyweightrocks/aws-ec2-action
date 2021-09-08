@@ -4,6 +4,9 @@ inputs:
   instance-id:  
     description: 'Instance ID'
     required: true
+  wait-instance-running:
+    description: 'Wait until the instance is running'  
+    default: true
 outputs:
   current-state: 
     description: 'The current state of the instance'

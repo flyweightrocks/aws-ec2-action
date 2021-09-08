@@ -4,8 +4,10 @@ const child_process = require('child_process');
 
 try {
   // `instance-id` input defined in action metadata file
-  const instanceId = core.getInput('instance-id');
-	console.log(`Start EC2 instance ${instanceId}!`);
+	const instanceId = core.getInput('instance-id');
+	const waitInstanceRunning = core.getInput('wait-instance-running');
+
+	console.log(`Start instance ${instanceId}`);
 
 	const output = JSON.parse(child_process
 		.execSync(`aws ec2 start-instances --instance-ids ${instanceId}`)
@@ -20,6 +22,12 @@ try {
 
 		core.setOutput("previous-state", previous);
 		core.setOutput("current-state", current);
+	}
+
+	if (waitInstanceRunning) {
+		console.log(`Wait until the instance is running`);
+
+		child_process.execSync(`aws ec2 wait instance-running --instance-ids ${instanceId}`)
 	}
 
 } catch (error) {
