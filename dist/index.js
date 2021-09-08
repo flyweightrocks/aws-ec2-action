@@ -6363,6 +6363,7 @@ try {
   const json = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
 } catch (error) {
+	
 	console.error('error', JSON.stringify(error, undefined, 2));
   core.setFailed(error.message);
 }
