@@ -18,7 +18,8 @@ aws ec2 stop-instances --instance-ids <instance-id>
 uses: flyweightrocks/aws-ec2-action@v1
 with:
   instance-id: 'Your Instance ID'
-  wait-instance-running: true
+  wait-instance-running: true  
+	stop-instance: true
 ```	
 
 ## Inputs
@@ -30,6 +31,11 @@ The instance ID of the EC2 container.
 
 `wait-instance-running`
 Wait until the instance is running.
+
+**Default: true**  
+
+`stop-instance`
+Stop the instance during post job cleanup.
 
 **Default: true**  
 

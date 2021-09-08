@@ -7,6 +7,9 @@ inputs:
   wait-instance-running:
     description: 'Wait until the instance is running'  
     default: true
+  stop-instance:
+    description: 'Stop the instance during post job cleanup'  
+    default: true    
 outputs:
   current-state: 
     description: 'The current state of the instance'
