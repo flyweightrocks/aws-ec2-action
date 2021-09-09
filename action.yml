@@ -1,5 +1,8 @@
-name: 'AWS EC2 Instance'
-description: 'Start and Stop AWS EC2 Instance'
+name: 'AWS EC2 Start and Stop'
+description: 'Start and Stop an AWS EC2 Instance with the AWS CLI'
+branding:
+  icon: 'play'  
+  color: 'orange'
 inputs:
   instance-id:  
     description: 'Instance ID'

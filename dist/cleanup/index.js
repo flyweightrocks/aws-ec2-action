@@ -6337,7 +6337,6 @@ const github = __nccwpck_require__(134);
 const child_process = __nccwpck_require__(129);
 
 try {
-  // `instance-id` input defined in action metadata file
 	const instanceId = core.getInput('instance-id');
 	const stopInstance = core.getBooleanInput('stop-instance');
 
